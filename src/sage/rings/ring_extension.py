@@ -546,7 +546,7 @@ class RingExtension_generic(CommutativeAlgebra):
           parent class (resp. element class)
 
         - ``canonical_backend`` -- a boolean (default: ``False``)
-          Whether the association between this ring extension is canonical,
+          Whether the association between this ring extension and its backend is canonical,
           or if there are choices involved (such as choosing a root of some defining polynomial).
           This affects the existence of a coercion from the backend and coercions between ring extensions.
 
@@ -1413,10 +1413,17 @@ class RingExtension_generic(CommutativeAlgebra):
         """
         Factor a univariate polynomial using code for the backend
 
-        EXAMPLES::
+        EXAMPLES:
 
-            sage: K = GF(625, 'a').over()
-            sage: a = K.gen()
+        We need to disable randomness since the defining polynomial of finite
+        field extensions is determined randomly, and this affects the output
+        below::
+
+            sage: set_random_seed(0)
+
+        ::
+
+            sage: K.<a> = GF(625, base=GF(25))
             sage: R.<x> = K[]
             sage: (x^2 - a^14).factor() # indirect doctest
             (x + 2 + a + 3*a^2 + a^3) * (x + 3 - a + 2*a^2 - a^3)
@@ -2788,7 +2795,8 @@ class RingExtensionWithGen(RingExtensionWithBasis):
 
         ::
 
-            sage: F = GF(9, 'a').over()
+            sage: k = GF(3)
+            sage: F.<a> = k.extension(2, absolute=False)
             sage: F.gens(ZZ)
             Traceback (most recent call last):
             ...

@@ -1128,33 +1128,28 @@ cdef class Polynomial(CommutativePolynomial):
             sage: pol[:6]
             5*x^5 + 4*x^4 + 3*x^3 + 2*x^2 + x
 
-        Any other kind of slicing is deprecated or an error, see
-        :trac:`18940`::
+        Any other kind of slicing is an error, see :trac:`18940`::
 
             sage: f[1:3]
-            doctest:...: DeprecationWarning: polynomial slicing with a start index is deprecated, use list() and slice the resulting list instead
-            See https://github.com/sagemath/sage/issues/18940 for details.
-            x
+            Traceback (most recent call last):
+            ...
+            IndexError: polynomial slicing with a start is not defined
+
             sage: f[1:3:2]
             Traceback (most recent call last):
             ...
-            NotImplementedError: polynomial slicing with a step is not defined
+            IndexError: polynomial slicing with a step is not defined
         """
         cdef Py_ssize_t d = self.degree() + 1
         if isinstance(n, slice):
             start, stop, step = n.start, n.stop, n.step
             if step is not None:
-                raise NotImplementedError("polynomial slicing with a step is not defined")
-            if start is None:
-                start = 0
-            else:
-                if start < 0:
-                    start = 0
-                deprecation(18940, "polynomial slicing with a start index is deprecated, use list() and slice the resulting list instead")
+                raise IndexError("polynomial slicing with a step is not defined")
+            if start is not None:
+                raise IndexError("polynomial slicing with a start is not defined")
             if stop is None or stop > d:
                 stop = d
-            values = ([self.base_ring().zero()] * start
-                      + [self.get_unsafe(i) for i in xrange(start, stop)])
+            values = [self.get_unsafe(i) for i in range(stop)]
             return self._new_generic(values)
 
         return self.get_coeff_c(pyobject_to_long(n))
@@ -2104,11 +2099,20 @@ cdef class Polynomial(CommutativePolynomial):
             sage: r^2 + r
             a^2 + a
         """
-        if self.base_ring().is_finite() and self.base_ring().is_field():
+        K = self.base_ring()
+        if K.is_finite() and K.is_field():
             if self.degree() < 0:
                 return ring(0)
             if self.degree() == 0:
                 raise ValueError("no roots A %s" % self)
+            p = K.characteristic()
+            if not K.is_prime_field() and all(c**p == c for c in self):
+                # This polynomial is actually defined over the ground field, and operations there will be much cheaper
+                if ring is None:
+                    ring = K
+                if degree is not None:
+                    degree *= K.absolute_degree()
+                return self.change_ring(K.prime_subfield()).any_root(ring, degree=degree, assume_squarefree=assume_squarefree)
             if not assume_squarefree:
                 SFD = self.squarefree_decomposition()
                 SFD.sort()
@@ -2122,13 +2126,13 @@ cdef class Polynomial(CommutativePolynomial):
                     return -self.get_unsafe(0) / self.get_unsafe(1)
                 else:
                     return ring(-self.get_unsafe(0) / self.get_unsafe(1))
-            q = self.base_ring().order()
+            q = K.order()
             if ring is None:
                 allowed_deg_mult = Integer(1)
             else:
-                if not (self.base_ring().is_field() and self.base_ring().is_finite()):
+                if not (K.is_field() and K.is_finite()):
                     raise NotImplementedError
-                if ring.characteristic() != self.base_ring().characteristic():
+                if ring.characteristic() != K.characteristic():
                     raise ValueError("ring must be an extension of the base ring")
                 if not (ring.is_field() and ring.is_finite()):
                     raise NotImplementedError
@@ -2215,9 +2219,9 @@ cdef class Polynomial(CommutativePolynomial):
                 degree = -degree
             if ring is None:
                 if degree == 1:
-                    ring = self.base_ring()
+                    ring = K
                 else:
-                    ring = self.base_ring().extension(degree) # this won't work yet.
+                    ring = K.extension(degree) # this won't work yet.
             # now self has only roots of degree ``degree``.
             # for now, we only implement the Cantor-Zassenhaus split
             k = self.degree() // degree
@@ -4661,11 +4665,11 @@ cdef class Polynomial(CommutativePolynomial):
             sage: P.<x> = PolynomialRing(GF(7^3, 'a'))
             sage: t = x^2 + 1
             sage: t.splitting_field('b', map=True)
-            (Finite Field in b of size 7^6,
+            (Finite Field in b of size 7^6 over its base,
              Ring morphism:
                From: Finite Field in a of size 7^3
-               To:   Finite Field in b of size 7^6
-               Defn: a |--> 2*b^4 + 6*b^3 + 2*b^2 + 3*b + 2)
+               To:   Finite Field in b of size 7^6 over its base
+               Defn: a |--> a)
 
         If the extension is trivial and the generators have the same
         name, the map will be the identity::
@@ -4701,13 +4705,13 @@ cdef class Polynomial(CommutativePolynomial):
             sage: P.<x> = PolynomialRing(GF(11^5, 'a'))
             sage: t = x^2 + 1
             sage: t.splitting_field('b')
-            Finite Field in b of size 11^10
+            Finite Field in b of size 11^10 over its base
             sage: t = 24*x^13 + 2*x^12 + 14
             sage: t.splitting_field('b')
-            Finite Field in b of size 11^30
+            Finite Field in b of size 11^30 over its base
             sage: t = x^56 - 14*x^3
             sage: t.splitting_field('b')
-            Finite Field in b of size 11^130
+            Finite Field in b of size 11^130 over its base
 
             sage: P.<x> = PolynomialRing(GF(19^6, 'a'))
             sage: t = -x^6 + x^2 + 1
@@ -4715,32 +4719,32 @@ cdef class Polynomial(CommutativePolynomial):
             Finite Field in b of size 19^6
             sage: t = 24*x^13 + 2*x^12 + 14
             sage: t.splitting_field('b')
-            Finite Field in b of size 19^18
+            Finite Field in b of size 19^18 over its base
             sage: t = x^56 - 14*x^3
             sage: t.splitting_field('b')
-            Finite Field in b of size 19^156
+            Finite Field in b of size 19^156 over its base
 
             sage: P.<x> = PolynomialRing(GF(83^6, 'a'))
             sage: t = 2*x^14 - 5 + 6*x
             sage: t.splitting_field('b')
-            Finite Field in b of size 83^84
+            Finite Field in b of size 83^84 over its base
             sage: t = 24*x^13 + 2*x^12 + 14
             sage: t.splitting_field('b')
-            Finite Field in b of size 83^78
+            Finite Field in b of size 83^78 over its base
             sage: t = x^56 - 14*x^3
             sage: t.splitting_field('b')
-            Finite Field in b of size 83^12
+            Finite Field in b of size 83^12 over its base
 
             sage: P.<x> = PolynomialRing(GF(401^13, 'a'))
             sage: t = 2*x^14 - 5 + 6*x
             sage: t.splitting_field('b')
-            Finite Field in b of size 401^104
+            Finite Field in b of size 401^104 over its base
             sage: t = 24*x^13 + 2*x^12 + 14
             sage: t.splitting_field('b')
-            Finite Field in b of size 401^156
+            Finite Field in b of size 401^156 over its base
             sage: t = x^56 - 14*x^3
             sage: t.splitting_field('b')
-            Finite Field in b of size 401^52
+            Finite Field in b of size 401^52 over its base
 
             sage: R.<x> = QQ[]
             sage: f = x^2 - 2
@@ -4768,7 +4772,8 @@ cdef class Polynomial(CommutativePolynomial):
             return splitting_field(f, name, map, **kwds)
         elif isinstance(F, FiniteField):
             degree = lcm([f.degree() for f, _ in self.factor()])
-            return F.extension(degree, name, map=map, **kwds)
+            absolute = F.is_prime_field() or degree == 1
+            return F.extension(degree, name, absolute=absolute, map=map, **kwds)
 
         raise NotImplementedError("splitting_field() is only implemented over number fields and finite fields")
 

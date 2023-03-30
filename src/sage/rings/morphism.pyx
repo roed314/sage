@@ -810,7 +810,7 @@ cdef class RingHomomorphism(RingMap):
 
             sage: R.<x> = ZZ[]
             sage: K.<a> = GF(7^2)
-            sage: L.<u> = K.extension(x^3 - 3)
+            sage: L.<u> = K.extension(x^3 - 3, implementation='PQR')
             sage: phi = L.hom([u^7], base_map=K.frobenius_endomorphism())
             sage: phi
             Ring endomorphism of Univariate Quotient Polynomial Ring in u over Finite Field in a of size 7^2 with modulus u^3 + 4
@@ -2035,8 +2035,8 @@ cdef class RingHomomorphism_im_gens(RingHomomorphism):
         """
         D = self.domain()
         ig = self._im_gens
-        s = '\n'.join(['%s |--> %s'%(D.gen(i), ig[i]) for\
-                       i in range(D.ngens())])
+        s = '\n'.join('{} |--> {}'.format(D.gen(i), ig[i])
+                       for i in range(D.ngens()))
         if s and self._base_map is not None:
             s += '\nwith map of base ring'
         return s
@@ -2866,21 +2866,22 @@ cdef class RingHomomorphism_from_quotient(RingHomomorphism):
         """
         return hash(self.phi)
 
-    def _repr_defn(self):
+    def _repr_defn(self) -> str:
         """
         Used internally for printing this function.
 
         EXAMPLES::
 
-            sage: R.<x,y> = QQ[]; S.<xx,yy> = R.quo([x^2,y^2]); f = S.hom([yy,xx])
+            sage: R.<x,y> = QQ[]; S.<xx,yy> = R.quo([x^2,y^2])
+            sage: f = S.hom([yy,xx])
             sage: print(f._repr_defn())
             xx |--> yy
             yy |--> xx
         """
         D = self.domain()
         ig = self.phi.im_gens()
-        return '\n'.join(['%s |--> %s'%(D.gen(i), ig[i]) for\
-                          i in range(D.ngens())])
+        return '\n'.join('{} |--> {}'.format(D.gen(i), ig[i])
+                         for i in range(D.ngens()))
 
     cpdef Element _call_(self, x):
         """
