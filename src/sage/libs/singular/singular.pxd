@@ -1,4 +1,5 @@
-from sage.libs.singular.decl cimport ring, poly, number, intvec
+# sage_setup: distribution = sagemath-singular
+from sage.libs.singular.decl cimport ring, poly, number, intvec, bigintmat
 from sage.libs.singular.function cimport Resolution
 
 from sage.rings.rational cimport Rational
@@ -29,6 +30,7 @@ cdef object   si2sa_ZZmod(number *n, ring *_ring, object base)
 cdef object   si2sa_NF(number *n, ring *_ring, object base)
 
 cdef object si2sa_intvec(intvec *v)
+cdef object si2sa_bigintvec(bigintmat *v)
 
 # dispatches to all the above.
 cdef object si2sa(number *n, ring *_ring, object base)

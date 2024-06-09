@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-libecm
 # distutils: libraries = ecm
 # distutils: extra_link_args = LINUX_NOEXECSTACK
 r"""
@@ -73,7 +74,7 @@ def ecmfactor(number, double B1, verbose=False, sigma=0):
 
     - ``B1`` -- bound for step 1 of ECM
 
-    - ``verbose`` (default: False) -- print some debugging information
+    - ``verbose`` (default: ``False``) -- print some debugging information
 
     OUTPUT:
 

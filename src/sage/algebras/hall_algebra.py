@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 r"""
 Hall Algebras
@@ -492,6 +493,7 @@ class HallAlgebra(CombinatorialFreeModule):
                 if cy != 0:
                     ret += cx * cy * f(mx)
             return ret
+
 
 class HallAlgebraMonomials(CombinatorialFreeModule):
     r"""

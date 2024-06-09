@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.modules
 """
 Yokonuma-Hecke Algebras
@@ -25,6 +26,7 @@ from sage.categories.rings import Rings
 from sage.combinat.free_module import CombinatorialFreeModule
 from sage.combinat.permutation import Permutations
 from sage.sets.family import Family
+
 
 class YokonumaHeckeAlgebra(CombinatorialFreeModule):
     r"""

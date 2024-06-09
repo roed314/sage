@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 r"""
 Fast word datatype using an array of unsigned char
 """
@@ -505,7 +506,7 @@ cdef class WordDatatype_char(WordDatatype):
 
         INPUT:
 
-        -  ``exp``  - an integer, a rational, a float number or plus infinity.
+        -  ``exp``  -- an integer, a rational, a float number or plus infinity.
 
         TESTS::
 

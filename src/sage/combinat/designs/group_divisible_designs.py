@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-graphs
 # sage.doctest: needs sage.rings.finite_rings
 r"""
 Group-Divisible Designs (GDD)
@@ -59,7 +60,7 @@ def group_divisible_design(v, K, G, existence=False, check=False):
 
     - ``v`` (integer)
 
-    - ``K,G`` (sets of integers)
+    - ``K``, ``G`` (sets of integers)
 
     - ``existence`` (boolean) -- instead of building the design, return:
 

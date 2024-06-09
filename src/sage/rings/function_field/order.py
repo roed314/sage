@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 r"""
 Orders of function fields
 
@@ -96,7 +97,6 @@ AUTHORS:
 - Kwankyu Lee (2017-04-30): added maximal orders of global function fields
 
 - Brent Baccala (2019-12-20): support orders in characteristic zero
-
 """
 
 # ****************************************************************************
@@ -162,7 +162,7 @@ class FunctionFieldOrder_base(CachedRepresentation, Parent):
 
     def is_noetherian(self):
         """
-        Return ``True`` since orders in function fields are noetherian.
+        Return ``True`` since orders in function fields are Noetherian.
 
         EXAMPLES::
 

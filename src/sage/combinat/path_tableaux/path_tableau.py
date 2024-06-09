@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 r"""
 Path Tableaux
 
@@ -223,8 +224,8 @@ class PathTableau(ClonableArray, metaclass=InheritComparisonClasscallMetaclass):
 
         INPUT:
 
-        ``i`` -- a positive integer
-        ``j`` -- a positive integer weakly greater than ``i``
+        - ``i`` -- a positive integer
+        - ``j`` -- a positive integer weakly greater than ``i``
 
         EXAMPLES::
 

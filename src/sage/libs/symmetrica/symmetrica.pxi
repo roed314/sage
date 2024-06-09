@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # We put all definitions together, whether they appear in def.h or
 # macro.h
 cdef extern from 'symmetrica/def.h':
@@ -238,7 +239,6 @@ cdef extern from 'symmetrica/macro.h':
     cdef struct number:
         OP n_self
         data n_data
-
 
 
     #MACROS
@@ -616,7 +616,6 @@ cdef object _py_longint(OP a):
     return res
 
 
-
 ###########
 #Fractions#
 ###########
@@ -861,7 +860,6 @@ cdef object _op_polynom(object d, OP res):
     return None
 
 
-
 #######################################
 #Schur symmetric functions and friends#
 #######################################
@@ -1018,7 +1016,6 @@ cdef void* _op_schur_general_dict(object d, OP res) noexcept:
         insert(next, res, NULL, NULL)
 
 
-
 ######################
 #Schubert Polynomials#
 ######################
@@ -1168,8 +1165,6 @@ cdef object _py_tableau(OP t):
         return SkewTableau(res)
     else:
         return Tableau(res)
-
-
 
 
 def start():

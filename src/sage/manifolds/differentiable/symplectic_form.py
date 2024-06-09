@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Symplectic structures
 
@@ -14,7 +15,6 @@ REFERENCES:
 
 - [AM1990]_
 - [RS2012]_
-
 """
 # *****************************************************************************
 #  Distributed under the terms of the GNU General Public License (GPL)
@@ -730,7 +730,7 @@ class SymplecticFormParal(SymplecticForm, DiffFormParal):
 
         INPUT:
 
-        - ``del_restrictions`` -- (default: True) determines whether the
+        - ``del_restrictions`` -- (default: ``True``) determines whether the
           restrictions of ``self`` to subdomains are deleted.
 
         TESTS::

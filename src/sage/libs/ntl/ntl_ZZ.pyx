@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-ntl
 # distutils: libraries = NTL_LIBRARIES gmp m
 # distutils: extra_compile_args = NTL_CFLAGS
 # distutils: include_dirs = NTL_INCDIR
@@ -472,6 +473,7 @@ def ntl_setSeed(x=None):
     sig_on()
     ZZ_SetSeed(seed.x)
     sig_off()
+
 
 ntl_setSeed()
 

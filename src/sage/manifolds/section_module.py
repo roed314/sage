@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Section Modules
 
@@ -15,7 +15,6 @@ Depending on the domain, there are two classes of section modules:
 AUTHORS:
 
 - Michael Jung (2019): initial version
-
 """
 
 #******************************************************************************

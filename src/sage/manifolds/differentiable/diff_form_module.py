@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Differential Form Modules
 
@@ -25,7 +26,6 @@ REFERENCES:
 
 - [KN1963]_
 - [Lee2013]_
-
 """
 # *****************************************************************************
 #       Copyright (C) 2015-2021 Eric Gourgoulhon <eric.gourgoulhon@obspm.fr>

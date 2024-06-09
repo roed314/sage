@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 r"""
 Free Fermions Super Lie Conformal Algebra.
@@ -34,6 +35,7 @@ AUTHORS:
 #*****************************************************************************
 
 from .graded_lie_conformal_algebra import GradedLieConformalAlgebra
+
 
 class FreeFermionsLieConformalAlgebra(GradedLieConformalAlgebra):
     r"""

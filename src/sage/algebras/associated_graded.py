@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.modules
 r"""
 Associated Graded Algebras To Filtered Algebras
@@ -20,6 +21,7 @@ from copy import copy
 from sage.categories.modules_with_basis import ModulesWithBasis
 from sage.sets.family import Family
 from sage.combinat.free_module import CombinatorialFreeModule
+
 
 class AssociatedGradedAlgebra(CombinatorialFreeModule):
     r"""

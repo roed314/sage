@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-modules
 r"""
 Rank function matroids
 
@@ -57,7 +58,7 @@ Methods
 #  the License, or (at your option) any later version.
 #                  https://www.gnu.org/licenses/
 # ****************************************************************************
-from .matroid import Matroid
+from sage.matroids.matroid import Matroid
 
 
 class RankMatroid(Matroid):

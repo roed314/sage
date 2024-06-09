@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Tangent Vectors
 
@@ -12,7 +13,6 @@ AUTHORS:
 REFERENCES:
 
 - Chap. 3 of [Lee2013]_
-
 """
 
 # *****************************************************************************

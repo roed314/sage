@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 # sage.doctest: needs sage.libs.gap
 r"""
 Overview of Hecke triangle groups and modular forms for Hecke triangle groups
@@ -559,7 +560,6 @@ Hecke triangle groups and elements:
       [      1     lam]
       [    lam lam + 2]
       sage: G.element_repr_method("default")
-
 
 
 Modular forms ring and spaces for Hecke triangle groups:
@@ -1197,7 +1197,6 @@ Modular forms ring and spaces for Hecke triangle groups:
      True
 
 
-
 Future ideas:
 -------------
 
@@ -1214,5 +1213,4 @@ Future ideas:
 - Support for general triangle groups (hard)
 
 - Support for "congruence" subgroups (hard)
-
 """

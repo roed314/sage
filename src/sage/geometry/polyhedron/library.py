@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-polyhedra
 r"""
 Library of commonly used, famous, or interesting polytopes
 
@@ -434,7 +435,7 @@ def gale_transform_to_primal(vectors, base_ring=None, backend=None):
         ValueError: input vectors not totally cyclic
     """
     from sage.modules.free_module_element import vector
-    from sage.matrix.constructor import Matrix
+    from sage.matrix.constructor import matrix
     if base_ring:
         vectors = tuple(vector(base_ring, x) for x in vectors)
     else:
@@ -454,9 +455,9 @@ def gale_transform_to_primal(vectors, base_ring=None, backend=None):
         # (And this is faster.)
 
         if base_ring:
-            ker = Matrix(base_ring, vectors).left_kernel()
+            ker = matrix(base_ring, vectors).left_kernel()
         else:
-            ker = Matrix(vectors).left_kernel()
+            ker = matrix(vectors).left_kernel()
         solutions = Polyhedron(lines=tuple(ker.basis_matrix()), base_ring=base_ring, backend=backend)
 
         from sage.matrix.special import identity_matrix
@@ -476,9 +477,9 @@ def gale_transform_to_primal(vectors, base_ring=None, backend=None):
     # where ``V`` is the dehomogenized dual point configuration.
     # If we append a row of ones to ``vectors``, ``V`` is just the right kernel.
     if base_ring:
-        m = Matrix(base_ring, vectors).transpose().stack(Matrix(base_ring, [[1]*len(vectors)]))
+        m = matrix(base_ring, vectors).transpose().stack(matrix(base_ring, [[1]*len(vectors)]))
     else:
-        m = Matrix(vectors).transpose().stack(Matrix([[1]*len(vectors)]))
+        m = matrix(vectors).transpose().stack(matrix([[1]*len(vectors)]))
 
     if m.rank() != len(vectors[0]) + 1:
         # The given vectors do not span the ambient space,
@@ -2061,7 +2062,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``True``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``True``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2090,7 +2091,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``True``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``True``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2119,7 +2120,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``True``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``True``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2148,7 +2149,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``False``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``False``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2188,7 +2189,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``False``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``False``) if ``True`` use exact
           coordinates instead of floating point approximations
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2222,7 +2223,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``True``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``True``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2248,7 +2249,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``False``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``False``) if ``True`` use exact
           coordinates instead of floating point approximations
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2312,7 +2313,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``True``) if ``False`` use floating
+        - ``exact`` -- (boolean, default ``True``) if ``False`` use floating
           point approximations instead of exact coordinates
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2615,7 +2616,7 @@ class Polytopes:
           coordinates in the weight basis. If ``None`` is given, the point
           `(1, 1, 1, \ldots)` is used.
 
-        - ``exact`` - (boolean, default ``True``) if ``False`` use floating
+        - ``exact`` -- (boolean, default ``True``) if ``False`` use floating
           point approximations instead of exact coordinates
 
         - ``regular`` -- boolean (default: ``False``); whether to apply a
@@ -2855,7 +2856,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``True``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``True``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2888,7 +2889,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``False``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``False``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2928,7 +2929,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``True``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``True``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2956,7 +2957,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``False``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``False``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -2995,7 +2996,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``True``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``True``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -3023,7 +3024,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``True``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``True``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.
@@ -3051,7 +3052,7 @@ class Polytopes:
 
         INPUT:
 
-        - ``exact`` - (boolean, default ``True``) if ``True`` use exact
+        - ``exact`` -- (boolean, default ``True``) if ``True`` use exact
           coordinates instead of floating point approximations.
 
         - ``backend`` -- the backend to use to create the polytope.

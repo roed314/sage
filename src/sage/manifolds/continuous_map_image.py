@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Images of Manifold Subsets under Continuous Maps as Subsets of the Codomain
 
@@ -5,7 +6,6 @@ Images of Manifold Subsets under Continuous Maps as Subsets of the Codomain
 from a manifold `M` to some manifold `N` as a subset `\Phi(M)` of `N`,
 or more generally, the image `\Phi(S)` of a subset `S \subseteq M` as a
 subset of `N`.
-
 """
 
 # ****************************************************************************

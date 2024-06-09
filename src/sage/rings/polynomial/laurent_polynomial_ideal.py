@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 # sage.doctest: needs sage.libs.singular sage.modules (because all doctests need laurent_polynomial_mpair, Groebner bases)
 r"""
 Ideals in Laurent polynomial rings.
@@ -10,7 +11,6 @@ saturated with respect to the ideal `(x_1 \cdots x_n)`.
 AUTHORS:
 
 - Kiran S. Kedlaya (2020): initial implementation
-
 """
 # ****************************************************************************
 #       Copyright (C) 2020 Kiran S. Kedlaya <kedlaya@ucsd.edu>

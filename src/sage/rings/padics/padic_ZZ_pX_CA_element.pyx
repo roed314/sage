@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-ntl
 # distutils: libraries = NTL_LIBRARIES gmp m
 # distutils: extra_compile_args = NTL_CFLAGS
 # distutils: include_dirs = NTL_INCDIR
@@ -157,7 +158,6 @@ AUTHORS:
 - Robert Harron (2011-09): fixes/enhancements
 
 - Julian Rueth (2012-10-15): fixed an initialization bug
-
 """
 # ****************************************************************************
 #       Copyright (C) 2008 David Roe <roed.math@gmail.com>

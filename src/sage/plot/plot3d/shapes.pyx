@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-plot
 """
 Basic objects such as Sphere, Box, Cone, etc.
 
@@ -39,7 +40,6 @@ EXAMPLES::
 
     from sage.plot.plot3d.shapes import *
     sphinx_plot(Torus(.7, .2, color=(0,.3,0)))
-
 """
 
 # ****************************************************************************

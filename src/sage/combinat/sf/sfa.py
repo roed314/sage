@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 r"""
 Symmetric Functions
@@ -195,7 +196,6 @@ AUTHORS:
 - Nicolas M. Thiery (partial refactoring)
 - Mike Zabrocki, Anne Schilling (2012)
 - Darij Grinberg (2013) Sym over rings that are not characteristic 0
-
 """
 # ****************************************************************************
 #       Copyright (C) 2007 Mike Hansen <mhansen@gmail.com>
@@ -246,6 +246,10 @@ def is_SymmetricFunctionAlgebra(x):
 
         sage: from sage.combinat.sf.sfa import is_SymmetricFunctionAlgebra
         sage: is_SymmetricFunctionAlgebra(5)
+        doctest:warning...
+        DeprecationWarning: the function is_SymmetricFunctionAlgebra is deprecated;
+        use 'isinstance(..., SymmetricFunctionAlgebra_generic)' instead
+        See https://github.com/sagemath/sage/issues/37896 for details.
         False
         sage: is_SymmetricFunctionAlgebra(ZZ)
         False
@@ -258,6 +262,8 @@ def is_SymmetricFunctionAlgebra(x):
         sage: is_SymmetricFunctionAlgebra(SymmetricFunctions(FractionField(QQ['q','t'])).macdonald().P())
         True
     """
+    from sage.misc.superseded import deprecation
+    deprecation(37896, "the function is_SymmetricFunctionAlgebra is deprecated; use 'isinstance(..., SymmetricFunctionAlgebra_generic)' instead")
     return isinstance(x, SymmetricFunctionAlgebra_generic)
 
 
@@ -3151,7 +3157,7 @@ class SymmetricFunctionAlgebra_generic_Element(CombinatorialFreeModule.Element):
 
         INPUT:
 
-        - ``right`` - something coercible to a symmetric function in
+        - ``right`` -- something coercible to a symmetric function in
           ``self.parent()``
 
         EXAMPLES::
@@ -6635,7 +6641,7 @@ class SymmetricFunctionsFamilyFunctor(SymmetricFunctionsFunctor):
             sage: F(QQ)
             Traceback (most recent call last):
             ...
-            TypeError: not a constant polynomial
+            TypeError: t is not a constant polynomial
         """
         from sage.combinat.sf.sf import SymmetricFunctions
         return self._basis(self._family(SymmetricFunctions(R), *self._args))

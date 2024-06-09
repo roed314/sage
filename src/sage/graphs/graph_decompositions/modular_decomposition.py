@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-graphs
 r"""
 Modular Decomposition
 
@@ -371,17 +372,17 @@ def print_md_tree(root):
         sage: from sage.graphs.graph_decompositions.modular_decomposition import *
         sage: print_md_tree(modular_decomposition(graphs.IcosahedralGraph()))
         PRIME
+         3
+         4
+         7
+         9
+         11
          1
          5
-         7
          8
-         11
          0
          2
          6
-         3
-         9
-         4
          10
     """
 
@@ -494,17 +495,17 @@ def habib_maurer_algorithm(graph, g_classes=None):
         sage: from sage.graphs.graph_decompositions.modular_decomposition import *
         sage: print_md_tree(habib_maurer_algorithm(graphs.IcosahedralGraph()))
         PRIME
+         3
+         4
+         7
+         9
+         11
          1
          5
-         7
          8
-         11
          0
          2
          6
-         3
-         9
-         4
          10
 
     The Octahedral graph is not Prime::

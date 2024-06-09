@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 # sage.doctest: needs sage.combinat sage.graphs
 r"""
 Functor construction for all spaces
@@ -5,7 +6,6 @@ Functor construction for all spaces
 AUTHORS:
 
 - Jonas Jermann (2013): initial version
-
 """
 
 # ****************************************************************************

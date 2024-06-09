@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 r"""
 Macdonald Polynomials
@@ -1494,7 +1495,7 @@ class MacdonaldPolynomials_ht(MacdonaldPolynomials_generic):
 
         INPUT:
 
-        - ``x`` - an element of ``self``
+        - ``x`` -- an element of ``self``
 
         OUTPUT:
 
@@ -1518,7 +1519,7 @@ class MacdonaldPolynomials_ht(MacdonaldPolynomials_generic):
 
         INPUT:
 
-        - ``x`` - an element of ``s`` basis
+        - ``x`` -- an element of ``s`` basis
 
         OUTPUT:
 

@@ -1,4 +1,5 @@
-# sage.doctest: optional - sage.modules sage.rings.finite_rings
+# sage_setup: distribution = sagemath-modules
+# sage.doctest: needs sage.modules sage.rings.finite_rings
 r"""
 Subfield subcode
 
@@ -254,10 +255,7 @@ class SubfieldSubcode(AbstractLinearCode):
                     H[i*m+k, j] = h_vec[k]
 
         H = H.echelon_form()
-        delete = []
-        for i in range(H.nrows()):
-            if H.row(i) == 0:
-                delete.append(i)
+        delete = [i for i in range(H.nrows()) if H.row(i) == 0]
         M = H.delete_rows(delete)
         M.set_immutable()
         return M

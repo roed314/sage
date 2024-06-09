@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-modules
 r"""
 Components as indexed sets of ring elements
 
@@ -234,7 +235,6 @@ In case of symmetries, only non-redundant components are stored::
     [ 0  0  0]
     sage: c._comp
     {(0, 1): 3}
-
 """
 
 # *****************************************************************************

@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Trivializations
 
@@ -8,7 +9,6 @@ The corresponding transition maps between two trivializations are represented by
 AUTHORS:
 
 - Michael Jung (2019) : initial version
-
 """
 
 # ****************************************************************************

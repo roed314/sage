@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 r"""
 Generating Series
 
@@ -30,7 +31,6 @@ TESTS::
     p[1, 1] + p[2]
     sage: s[3]
     p[1, 1, 1] + p[2, 1]
-
 """
 
 # ****************************************************************************

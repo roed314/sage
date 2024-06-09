@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-graphs
 r"""
 Hypergraph generators
 
@@ -211,7 +212,7 @@ class HypergraphGenerators:
 
         INPUT:
 
-        - ``k,n`` -- nonnegative integers with `k\leq n`
+        - ``k``, ``n`` -- nonnegative integers with `k\leq n`
 
         EXAMPLES::
 

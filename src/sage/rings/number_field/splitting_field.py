@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-flint
 """
 Splitting fields of polynomials over number fields
 
@@ -5,7 +6,6 @@ AUTHORS:
 
 - Jeroen Demeyer (2014-01-02): initial version for :issue:`2217`
 - Jeroen Demeyer (2014-01-03): added ``abort_degree`` argument, :issue:`15626`
-
 """
 
 #*****************************************************************************

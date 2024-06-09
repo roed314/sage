@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-graphs
 """
 Genus
 
@@ -24,7 +25,6 @@ where `E`, `V`, and `F` denote the number of orbits of `e`, `v`, and
 
 We make several optimizations to the naive algorithm, which are
 described throughout the file.
-
 """
 
 # ****************************************************************************

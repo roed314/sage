@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 r"""
 Crystals of Modified Nakajima Monomials
@@ -973,8 +974,8 @@ class InfinityCrystalOfNakajimaMonomials(UniqueRepresentation, Parent):
 
         - ``letter`` -- can be one of the following:
 
-          * ``'Y'`` - use `Y_{i,k}`, corresponds to fundamental weights
-          * ``'A'`` - use `A_{i,k}`, corresponds to simple roots
+          * ``'Y'`` -- use `Y_{i,k}`, corresponds to fundamental weights
+          * ``'A'`` -- use `A_{i,k}`, corresponds to simple roots
 
         EXAMPLES::
 

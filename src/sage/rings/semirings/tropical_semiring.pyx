@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 r"""
 Tropical Semirings
 
@@ -418,6 +419,7 @@ cdef class TropicalSemiringElement(Element):
             return infinity
         return self._val
 
+
 class TropicalSemiring(Parent, UniqueRepresentation):
     r"""
     The tropical semiring.
@@ -650,6 +652,7 @@ class TropicalSemiring(Parent, UniqueRepresentation):
             (1, +infinity)
         """
         return (self.element_class(self, self.base().one()), self.infinity())
+
 
 cdef class TropicalToTropical(Map):
     """

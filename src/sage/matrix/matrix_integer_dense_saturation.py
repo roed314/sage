@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-linbox
 """
 Saturation over ZZ
 """
@@ -19,7 +20,7 @@ def p_saturation(A, p, proof=True):
 
     - A -- a matrix over ZZ
     - p -- a prime
-    - proof -- bool (default: True)
+    - proof -- bool (default: ``True``)
 
     OUTPUT:
 
@@ -192,7 +193,7 @@ def saturation(A, proof=True, p=0, max_dets=5):
     INPUT:
 
     - A     -- a matrix over ZZ
-    - proof -- bool (default: True)
+    - proof -- bool (default: ``True``)
     - p     -- int (default: 0); if not 0 only guarantees that output is
       p-saturated
     - max_dets -- int (default: 4) max number of dets of submatrices to

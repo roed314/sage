@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-graphs
 # sage.doctest: optional - sage.modules
 r"""
 Families of graphs derived from classical geometries over finite fields
@@ -36,8 +37,8 @@ def SymplecticPolarGraph(d, q, algorithm=None):
 
     INPUT:
 
-    - ``d,q`` -- integers; note that only even values of `d` are accepted by the
-      function.
+    - ``d``, ``q`` -- integers; note that only even values of `d` are accepted
+      by the function.
 
     - ``algorithm`` -- string (default: ``None``); if set to ``'gap'``, then the
       computation is carried via GAP library interface, computing totally
@@ -216,7 +217,7 @@ def _orthogonal_polar_graph(m, q, sign="+", point_type=[0]):
 
     INPUT:
 
-    - ``m,q`` -- integers; `q` must be a prime power
+    - ``m``, ``q`` -- integers; `q` must be a prime power
 
     - ``sign`` -- string (default: ``"+"``); must be ``"+"`` or ``"-"`` if `m`
       is even, ``"+"`` (default) otherwise
@@ -340,7 +341,7 @@ def OrthogonalPolarGraph(m, q, sign="+"):
 
     INPUT:
 
-    - ``m,q`` -- integers; `q` must be a prime power
+    - ``m``, ``q`` -- integers; `q` must be a prime power
 
     - ``sign`` -- string (default: ``"+"``); must be ``"+"`` or ``"-"`` if `m`
       is even, ``"+"`` (default) otherwise
@@ -613,7 +614,7 @@ def UnitaryPolarGraph(m, q, algorithm="gap"):
 
     INPUT:
 
-    - ``m,q`` -- integers; `q` must be a prime power
+    - ``m``, ``q`` -- integers; `q` must be a prime power
 
     - ``algorithm`` -- string (default: ``"gap"``); if set to 'gap' then the
       computation is carried via GAP library interface, computing totally
@@ -686,7 +687,7 @@ def NonisotropicUnitaryPolarGraph(m, q):
 
     INPUT:
 
-    - ``m,q`` -- integers; `q` must be a prime power
+    - ``m``, ``q`` -- integers; `q` must be a prime power
 
     EXAMPLES::
 
@@ -749,7 +750,7 @@ def UnitaryDualPolarGraph(m, q):
 
     INPUT:
 
-    - ``m,q`` -- integers; `q` must be a prime power
+    - ``m``, ``q`` -- integers; `q` must be a prime power
 
     EXAMPLES:
 
@@ -803,7 +804,7 @@ def SymplecticDualPolarGraph(m, q):
 
     INPUT:
 
-    - ``m,q`` -- integers; `q` must be a prime power, and `m` must be even
+    - ``m``, ``q`` -- integers; `q` must be a prime power, and `m` must be even
 
     EXAMPLES::
 

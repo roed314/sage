@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Points of Topological Manifolds
 
@@ -74,7 +75,6 @@ for the comparison::
     sage: p4 = U((1, pi/2, -pi))
     sage: p4 == p
     True
-
 """
 
 #*****************************************************************************

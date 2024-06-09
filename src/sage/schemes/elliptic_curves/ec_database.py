@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 r"""
 Tables of elliptic curves of given rank
 
@@ -65,7 +66,6 @@ AUTHORS:
 
 See also the functions :func:`cremona_curves` and :func:`cremona_optimal_curves`
 which enable easy looping through the Cremona elliptic curve database.
-
 """
 
 import os
@@ -87,7 +87,7 @@ class EllipticCurves:
 
         - ``n`` (int, default 10) -- the maximum number of curves returned.
 
-        - ``labels`` (bool, default False) -- if True, return Cremona
+        - ``labels`` (bool, default: ``False``) -- if True, return Cremona
           labels instead of curves.
 
         OUTPUT:

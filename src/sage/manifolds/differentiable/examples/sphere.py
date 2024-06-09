@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Spheres smoothly embedded in Euclidean Space
 
@@ -163,7 +164,6 @@ a volume form::
     sage: eps = g.volume_form()
     sage: eps.display()
     eps_g = -dchi
-
 """
 
 from sage.manifolds.differentiable.pseudo_riemannian_submanifold import \

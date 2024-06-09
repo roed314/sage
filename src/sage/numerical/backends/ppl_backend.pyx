@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-polyhedra
 # sage.doctest: optional - pplpy
 """
 PPL Backend
@@ -954,7 +955,6 @@ cdef class PPLBackend(GenericBackend):
             (0, 5)
         """
         return (self.col_lower_bound[index], self.col_upper_bound[index])
-
 
     cpdef bint is_variable_binary(self, int index) noexcept:
         """

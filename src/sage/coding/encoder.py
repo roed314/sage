@@ -1,4 +1,5 @@
-# sage.doctest: optional - sage.modules sage.rings.finite_rings
+# sage_setup: distribution = sagemath-modules
+# sage.doctest: needs sage.modules sage.rings.finite_rings
 r"""
 Encoders
 
@@ -7,7 +8,6 @@ Representation of a bijection between a message space and a code.
 AUTHORS:
 
 - David Lucas (2015): initial version
-
 """
 #*****************************************************************************
 #       Copyright (C) 2015 David Lucas <david.lucas@inria.fr>

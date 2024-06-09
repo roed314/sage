@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-graphs
 r"""
 Independent sets
 
@@ -12,7 +13,6 @@ sets. See the documentation of :class:`IndependentSets` for actual examples.
 
 Classes and methods
 -------------------
-
 """
 
 from sage.data_structures.binary_matrix cimport *

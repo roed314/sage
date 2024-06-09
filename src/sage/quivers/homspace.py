@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-flint
 """
 Quiver Homspace
 """
@@ -577,7 +578,7 @@ class QuiverHomSpace(Homset):
 
         INPUT:
 
-        - ``basis`` - bool. If ``False``, then only the module is
+        - ``basis`` -- bool. If ``False``, then only the module is
           returned.  If ``True``, then a tuple is returned.  The first
           element is the QuiverRep and the second element is a
           dictionary which associates to each vertex a list.  The

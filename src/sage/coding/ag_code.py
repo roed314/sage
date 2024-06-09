@@ -1,4 +1,5 @@
-# sage.doctest: optional - sage.rings.finite_rings sage.schemes
+# sage_setup: distribution = sagemath-modules
+# sage.doctest: needs sage.rings.finite_rings sage.schemes
 """
 AG codes
 
@@ -57,7 +58,6 @@ EXAMPLES::
 AUTHORS:
 
 - Kwankyu Lee (2019-03): initial version
-
 """
 
 # ****************************************************************************

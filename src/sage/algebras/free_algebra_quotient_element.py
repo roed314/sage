@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 """
 Free algebra quotient elements
@@ -5,7 +6,6 @@ Free algebra quotient elements
 AUTHORS:
     - William Stein (2011-11-19): improved doctest coverage to 100%
     - David Kohel (2005-09): initial version
-
 """
 
 #*****************************************************************************

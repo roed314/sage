@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 """
 Tensor Products of Crystals
@@ -582,8 +583,6 @@ class FullTensorProductOfCrystals(TensorProductOfCrystals):
         """
         for x in self.cartesian_product:
             yield self(*x)
-
-#    list = CombinatorialClass._CombinatorialClass__list_from_iterator
 
     def cardinality(self):
         """

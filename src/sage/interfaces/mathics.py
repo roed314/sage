@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Interface to Mathics
 
@@ -351,9 +352,6 @@ AUTHORS:
 
 
 Thanks to Rocky Bernstein and Juan Mauricio Matera for their support. For further acknowledgments see `this list <https://github.com/mathics/Mathics/blob/master/AUTHORS.txt>`__.
-
-
-
 
 TESTS:
 

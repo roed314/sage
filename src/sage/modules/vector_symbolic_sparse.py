@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 """
 Sparse vectors over the symbolic ring
 
@@ -44,7 +45,6 @@ Test pickling/unpickling::
     sage: u = vector(SR, [sin(x^2)], sparse=True)
     sage: loads(dumps(u)) == u
     True
-
 """
 
 # ****************************************************************************

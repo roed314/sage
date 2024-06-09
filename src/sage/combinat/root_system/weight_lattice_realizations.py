@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-modules
 """
 Weight lattice realizations
 """
@@ -535,7 +536,7 @@ class WeightLatticeRealizations(Category_over_base_ring):
 
             INPUT:
 
-            - ``f`` - a linear map from ``self`` to ``self`` which preserves alcoves
+            - ``f`` -- a linear map from ``self`` to ``self`` which preserves alcoves
 
             This method returns the Dynkin diagram automorphism for
             the decomposition `f = d w` (see

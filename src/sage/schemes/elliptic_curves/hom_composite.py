@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 r"""
 Composite morphisms of elliptic curves
 
@@ -450,7 +451,7 @@ class EllipticCurveHom_composite(EllipticCurveHom):
 
         - ``maps`` -- sequence of :class:`EllipticCurveHom` objects
         - ``E`` (optional) -- the domain elliptic curve
-        - ``strict`` (optional, default: ``True``) -- if ``True``,
+        - ``strict`` (default: ``True``) -- if ``True``,
           always return an :class:`EllipticCurveHom_composite` object;
           else may return another :class:`EllipticCurveHom` type
 

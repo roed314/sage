@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 r"""
 Field `\QQ` of Rational Numbers
 
@@ -51,7 +52,6 @@ AUTHORS:
   Removed duplicates of ``discriminant()`` and ``signature()``.
 
 - Anna Haensch (2018-03): Added function ``quadratic_defect()``
-
 """
 
 from sage.rings.integer import Integer

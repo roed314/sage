@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-polyhedra
 cimport cython
 from sage.data_structures.list_of_pairs cimport ListOfPairs
 from sage.structure.sage_object         cimport SageObject
@@ -34,7 +35,6 @@ cdef class CombinatorialPolyhedron(SageObject):
     cdef tuple Vrep(self)
     cdef tuple facet_names(self)
     cdef tuple equations(self)
-    cdef tuple equalities(self)
     cdef unsigned int n_Vrepresentation(self) noexcept
     cdef unsigned int n_Hrepresentation(self) noexcept
     cdef bint is_bounded(self) noexcept

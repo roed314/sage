@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 # sage.doctest: needs sage.combinat sage.graphs
 r"""
 Subspaces of modular forms for Hecke triangle groups
@@ -5,7 +6,6 @@ Subspaces of modular forms for Hecke triangle groups
 AUTHORS:
 
 - Jonas Jermann (2013): initial version
-
 """
 
 # ****************************************************************************

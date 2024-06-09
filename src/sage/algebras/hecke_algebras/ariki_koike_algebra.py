@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 r"""
 Ariki-Koike Algebras
@@ -68,6 +69,8 @@ from sage.sets.family import Family
 from sage.data_structures.blas_dict import iaxpy
 
 # ABC for basis classes
+
+
 class _Basis(CombinatorialFreeModule, BindableClass):
     r"""
     Abstract base class for bases of the Ariki-Koike algebra.
@@ -111,6 +114,7 @@ class _Basis(CombinatorialFreeModule, BindableClass):
             ((0, 0, 0), [1, 2, 3])
         """
         return (self._zero_tuple, self._one_perm)
+
 
 class ArikiKoikeAlgebra(Parent, UniqueRepresentation):
     r"""

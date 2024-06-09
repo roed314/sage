@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-plot
 # sage.doctest: needs sage.symbolic
 """
 Contour plots
@@ -33,14 +34,14 @@ class ContourPlot(GraphicPrimitive):
 
     INPUT:
 
-    - ``xy_data_array`` - list of lists giving evaluated values of the function
+    - ``xy_data_array`` -- list of lists giving evaluated values of the function
       on the grid
 
-    - ``xrange`` - tuple of 2 floats indicating range for horizontal direction
+    - ``xrange`` -- tuple of 2 floats indicating range for horizontal direction
 
-    - ``yrange`` - tuple of 2 floats indicating range for vertical direction
+    - ``yrange`` -- tuple of 2 floats indicating range for vertical direction
 
-    - ``options`` - dict of valid plot options to pass to constructor
+    - ``options`` -- dict of valid plot options to pass to constructor
 
     EXAMPLES:
 
@@ -242,10 +243,10 @@ def contour_plot(f, xrange, yrange, **options):
 
     - ``f`` -- a function of two variables
 
-    - ``(xmin,xmax)`` -- 2-tuple, the range of ``x`` values OR 3-tuple
+    - ``(xmin, xmax)`` -- 2-tuple, the range of ``x`` values OR 3-tuple
       ``(x,xmin,xmax)``
 
-    - ``(ymin,ymax)`` -- 2-tuple, the range of ``y`` values OR 3-tuple
+    - ``(ymin, ymax)`` -- 2-tuple, the range of ``y`` values OR 3-tuple
       ``(y,ymin,ymax)``
 
     The following inputs must all be passed in as named parameters:
@@ -281,7 +282,7 @@ def contour_plot(f, xrange, yrange, **options):
       ``"-."``, ``":"``.  If the list is shorter than the number of
       contours, then the styles will be repeated cyclically.
 
-    - ``labels`` -- boolean (default: False) Show level labels or not.
+    - ``labels`` -- boolean (default: ``False``) Show level labels or not.
 
       The following options are to adjust the style and placement of
       labels, they have no effect if no labels are shown.
@@ -295,7 +296,7 @@ def contour_plot(f, xrange, yrange, **options):
         labels.  A color is a string giving the name of one or a
         3-tuple of floats.
 
-      - ``label_inline`` -- boolean (default: False if fill is True,
+      - ``label_inline`` -- boolean (default: ``False`` if fill is True,
         otherwise True), controls whether the underlying contour is
         removed or not.
 
@@ -309,7 +310,7 @@ def contour_plot(f, xrange, yrange, **options):
         text string labels as values.  It can also be any callable which
         returns a string when called with a numeric contour level.
 
-    - ``colorbar`` -- boolean (default: False) Show a colorbar or not.
+    - ``colorbar`` -- boolean (default: ``False``) Show a colorbar or not.
 
       The following options are to adjust the style and placement of
       colorbars.  They have no effect if a colorbar is not shown.
@@ -328,7 +329,7 @@ def contour_plot(f, xrange, yrange, **options):
 
     - ``legend_label`` -- the label for this item in the legend
 
-    -  ``region`` - (default: None) If region is given, it must be a function
+    -  ``region`` -- (default: None) If region is given, it must be a function
         of two variables. Only segments of the surface where region(x,y)
         returns a number >0 will be included in the plot.
 
@@ -1046,10 +1047,10 @@ def implicit_plot(f, xrange, yrange, **options):
 
     - ``f`` -- a function of two variables or equation in two variables
 
-    - ``(xmin,xmax)`` -- 2-tuple, the range of ``x``
+    - ``(xmin, xmax)`` -- 2-tuple, the range of ``x``
       values or ``(x,xmin,xmax)``
 
-    - ``(ymin,ymax)`` -- 2-tuple, the range of ``y``
+    - ``(ymin, ymax)`` -- 2-tuple, the range of ``y``
       values or ``(y,ymin,ymax)``
 
     The following inputs must all be passed in as named parameters:
@@ -1407,10 +1408,10 @@ def region_plot(f, xrange, yrange, **options):
     - ``f`` -- a boolean function or a list of boolean functions of
       two variables
 
-    - ``(xmin,xmax)`` -- 2-tuple, the range of ``x`` values OR 3-tuple
+    - ``(xmin, xmax)`` -- 2-tuple, the range of ``x`` values OR 3-tuple
       ``(x,xmin,xmax)``
 
-    - ``(ymin,ymax)`` -- 2-tuple, the range of ``y`` values OR 3-tuple
+    - ``(ymin, ymax)`` -- 2-tuple, the range of ``y`` values OR 3-tuple
       ``(y,ymin,ymax)``
 
     - ``plot_points``  -- integer (default: 100); number of points to plot
@@ -1441,7 +1442,7 @@ def region_plot(f, xrange, yrange, **options):
 
     - ``legend_label`` -- the label for this item in the legend
 
-    - ``base`` - (default: 10) the base of the logarithm if
+    - ``base`` -- (default: 10) the base of the logarithm if
       a logarithmic scale is set. This must be greater than 1. The base
       can be also given as a list or tuple ``(basex, basey)``.
       ``basex`` sets the base of the logarithm along the horizontal

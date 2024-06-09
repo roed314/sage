@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 r"""
 Word classes
 
@@ -7,8 +8,6 @@ AUTHORS:
 - Amy Glen
 - Sébastien Labbé
 - Franco Saliola
-
-
 """
 #*****************************************************************************
 #       Copyright (C) 2008 Arnaud Bergeron <abergeron@gmail.com>,

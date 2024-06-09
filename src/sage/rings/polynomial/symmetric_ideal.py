@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 # sage.doctest: needs sage.libs.singular
 """
 Symmetric Ideals of Infinite Polynomial Rings
@@ -41,7 +42,6 @@ equal to `x_1` in ``Q``. Indeed, we have
 
     sage: Q(p)*x[2] == Q(p)*x[1]*x[3]*x[5]                                              # needs sage.combinat
     True
-
 """
 # ****************************************************************************
 #       Copyright (C) 2009 Simon King <king@mathematik.nuigalway.ie>
@@ -184,9 +184,9 @@ class SymmetricIdeal(Ideal_generic):
         """
         INPUT:
 
-        ``ring`` -- an infinite polynomial ring
-        ``gens`` -- generators of this ideal
-        ``coerce`` -- (bool, default ``True``) coerce the given generators into ``ring``
+        - ``ring`` -- an infinite polynomial ring
+        - ``gens`` -- generators of this ideal
+        - ``coerce`` -- (bool, default ``True``) coerce the given generators into ``ring``
 
         EXAMPLES::
 

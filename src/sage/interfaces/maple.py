@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Interface to Maple
 
@@ -751,7 +752,7 @@ connection to a server running Maple; for hints, type
         INPUT:
 
 
-        -  ``s`` - a string representing the function whose
+        -  ``s`` -- a string representing the function whose
            source code you want
 
 
@@ -785,7 +786,7 @@ connection to a server running Maple; for hints, type
 
         INPUT:
 
-        -  ``string`` - a string to search for in the maple help
+        -  ``string`` -- a string to search for in the maple help
            system
 
         EXAMPLES::

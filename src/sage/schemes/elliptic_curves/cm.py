@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 """
 Complex multiplication for elliptic curves
 
@@ -17,7 +18,6 @@ AUTHORS:
 - Robert Bradshaw
 - John Cremona
 - William Stein
-
 """
 
 # ****************************************************************************

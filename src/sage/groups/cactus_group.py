@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-groups
 # sage.doctest: needs sage.rings.number_field
 r"""
 Cactus Groups
@@ -43,7 +44,7 @@ class CactusGroup(UniqueRepresentation, Group):
 
     INPUT:
 
-    - ``n`` -- an integer
+    - ``n`` -- integer
 
     EXAMPLES:
 

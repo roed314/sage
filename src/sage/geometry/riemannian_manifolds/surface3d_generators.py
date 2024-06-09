@@ -1,10 +1,10 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Common parametrized surfaces in 3D.
 
 AUTHORS::
 
 - Joris Vankerschaver (2012-06-16)
-
 """
 #*****************************************************************************
 #       Copyright (C) 2010  Joris Vankerschaver <joris.vankerschaver@gmail.com>
@@ -110,7 +110,7 @@ class SurfaceGenerators:
 
         INPUT:
 
-        - ``a, b`` -- surface parameters.
+        - ``a``, ``b`` -- surface parameters.
 
         - ``name`` -- string. Name of the surface.
 
@@ -316,7 +316,7 @@ class SurfaceGenerators:
 
         - ``a``, ``b``, ``c`` -- Surface parameters.
 
-        - ``elliptic`` (default: True) -- whether to create an elliptic or
+        - ``elliptic`` (default: ``True``) -- whether to create an elliptic or
           hyperbolic paraboloid.
 
         - ``name`` -- string. Name of the surface.

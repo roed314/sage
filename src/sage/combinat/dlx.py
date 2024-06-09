@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 """
 Exact Cover Problem via Dancing Links
 """
@@ -126,7 +127,7 @@ class DLXMatrix:
         INPUT:
 
 
-        -  ``other`` - a DLX matrix
+        -  ``other`` -- a DLX matrix
 
 
         EXAMPLES::

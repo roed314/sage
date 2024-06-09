@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 r"""
 Graded Lie Conformal Algebras
@@ -50,6 +51,7 @@ AUTHORS:
 from sage.categories.lie_conformal_algebras import LieConformalAlgebras
 from .lie_conformal_algebra_with_structure_coefs import \
                                 LieConformalAlgebraWithStructureCoefficients
+
 
 class GradedLieConformalAlgebra(LieConformalAlgebraWithStructureCoefficients):
     r"""

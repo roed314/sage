@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 r"""
 Fock Space
@@ -1606,6 +1607,7 @@ class FockSpaceBases(Category_realization_of_parent):
 
 ###############################################################################
 ## Truncated Fock space
+
 
 class FockSpaceTruncated(FockSpace):
     r"""

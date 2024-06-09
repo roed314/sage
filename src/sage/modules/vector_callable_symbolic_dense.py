@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 """
 Vectors over callable symbolic rings
 
@@ -31,8 +32,6 @@ TESTS::
     sage: f(u,v,w) = (2*u+v,u-w,w^2+u)
     sage: loads(dumps(f)) == f
     True
-
-
 """
 
 # ****************************************************************************

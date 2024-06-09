@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.groups sage.modules
 r"""
 Latin Squares
@@ -113,7 +114,6 @@ TESTS::
     sage: L = elementary_abelian_2group(3)
     sage: L == loads(dumps(L))
     True
-
 """
 # ****************************************************************************
 #       Copyright (C) 2008 Carlo Hamalainen <carlo.hamalainen@gmail.com>,
@@ -625,7 +625,7 @@ class LatinSquare:
 
         INPUT:
 
-        -  ``self`` - LatinSquare
+        -  ``self`` -- LatinSquare
 
         EXAMPLES::
 
@@ -742,11 +742,11 @@ class LatinSquare:
 
         INPUT:
 
-        -  ``self`` - LatinSquare
+        -  ``self`` -- LatinSquare
 
-        -  ``r`` - int; row of the latin square
+        -  ``r`` -- int; row of the latin square
 
-        -  ``c`` - int; column of the latin square
+        -  ``c`` -- int; column of the latin square
 
         EXAMPLES::
 
@@ -789,12 +789,12 @@ class LatinSquare:
 
         INPUT:
 
-        -  ``self`` - LatinSquare
+        -  ``self`` -- LatinSquare
 
         OUTPUT:
 
-        - ``[r, c]`` - cell such that self[r, c] is empty, or returns
-          None if self is a (full) latin square.
+        - ``[r, c]`` -- cell such that ``self[r, c]`` is empty, or returns
+          ``None`` if ``self`` is a (full) latin square
 
         EXAMPLES::
 
@@ -1598,9 +1598,9 @@ def beta1(rce, T1, T2):
     INPUT:
 
 
-    -  ``rce`` - tuple (or list) (r, c, e) in T1
+    -  ``rce`` -- tuple (or list) (r, c, e) in T1
 
-    -  ``T1, T2`` - latin bitrade
+    -  ``T1, T2`` -- latin bitrade
 
 
     OUTPUT: (x, c, e) in T2.
@@ -1638,9 +1638,9 @@ def beta2(rce, T1, T2):
 
     INPUT:
 
-    -  ``rce`` - tuple (or list) (r, c, e) in T1
+    -  ``rce`` -- tuple (or list) (r, c, e) in T1
 
-    -  ``T1, T2`` - latin bitrade
+    -  ``T1, T2`` -- latin bitrade
 
 
     OUTPUT:
@@ -1681,9 +1681,9 @@ def beta3(rce, T1, T2):
     INPUT:
 
 
-    -  ``rce`` - tuple (or list) (r, c, e) in T1
+    -  ``rce`` -- tuple (or list) (r, c, e) in T1
 
-    -  ``T1, T2`` - latin bitrade
+    -  ``T1, T2`` -- latin bitrade
 
 
     OUTPUT:

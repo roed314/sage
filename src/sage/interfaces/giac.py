@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Pexpect Interface to Giac
 
@@ -448,7 +449,6 @@ Full html documentation for giac is available from your giac installation at:
     ``$PREFIX``/share/giac/doc/en/cascmd_en/index.html
 
 If you got giac from the spkg then ``$PREFIX`` is ``$SAGE_LOCAL``
-
 """
 
     def expect(self):
@@ -1151,11 +1151,11 @@ class GiacElement(ExpectElement):
         INPUT:
 
 
-        -  ``var`` - variable
+        -  ``var`` -- variable
 
-        -  ``min`` - default: None
+        -  ``min`` -- default: None
 
-        -  ``max`` - default: None
+        -  ``max`` -- default: None
 
 
         This returns the definite integral if xmin is not None, otherwise
@@ -1190,11 +1190,11 @@ class GiacElement(ExpectElement):
 
         INPUT:
 
-        -  ``var`` - variable
+        -  ``var`` -- variable
 
-        -  ``min`` - default: None
+        -  ``min`` -- default: None
 
-        -  ``max`` - default: None
+        -  ``max`` -- default: None
 
         This returns the definite integral if xmin is not None, otherwise
         an indefinite integral.

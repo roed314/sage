@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 # sage.doctest: needs sage.rings.number_field
 r"""
 Projective plane conics over a number field
@@ -5,7 +6,6 @@ Projective plane conics over a number field
 AUTHORS:
 
 - Marco Streng (2010-07-20)
-
 """
 # ****************************************************************************
 #       Copyright (C) 2009/2010 Marco Streng <marco.streng@gmail.com>

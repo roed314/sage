@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-pari
 # sage.doctest: needs sage.groups
 r"""
 Spinor genus computations.
@@ -149,7 +150,7 @@ class SpinorOperators(AbelianGroupGap):
 
         - ``p`` -- a prime
 
-        - ``x```-- a non zero rational number
+        - ``x``` -- a non zero rational number
 
         EXAMPLES::
 
@@ -198,7 +199,7 @@ class SpinorOperators(AbelianGroupGap):
           if ``prime`` is ``None``, ``r`` must not be divisible
           by the defining primes of ``self``
 
-        - ``prime`` --(default:``None``) a prime or `-1`
+        - ``prime`` -- (default:``None``) a prime or `-1`
 
         OUTPUT:
 

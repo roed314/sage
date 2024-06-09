@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 # sage.doctest: needs sage.rings.real_interval_field sage.rings.real_mpfr
 """
 Lazy real and complex numbers
@@ -354,6 +355,7 @@ class RealLazyField_class(LazyField):
 
 RLF = RealLazyField_class()
 
+
 def RealLazyField():
     """
     Return the lazy real field.
@@ -509,6 +511,7 @@ class ComplexLazyField_class(LazyField):
 
 CLF = ComplexLazyField_class()
 
+
 def ComplexLazyField():
     """
     Returns the lazy complex field.
@@ -521,7 +524,6 @@ def ComplexLazyField():
         True
     """
     return CLF
-
 
 
 cdef int get_new_prec(R, int depth) except -1:
@@ -916,6 +918,7 @@ def make_element(parent, *args):
         True
     """
     return parent(*args)
+
 
 cdef class LazyWrapper(LazyFieldElement):
 

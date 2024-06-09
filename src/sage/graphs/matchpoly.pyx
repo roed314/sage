@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-flint
 # cython: binding=True
 # sage.doctest: needs sage.libs.flint sage.graphs
 """
@@ -64,11 +65,11 @@ def matching_polynomial(G, complement=True, name=None):
 
     INPUT:
 
-    - ``complement`` - (default: ``True``) whether to use Godsil's duality
+    - ``complement`` -- (default: ``True``) whether to use Godsil's duality
       theorem to compute the matching polynomial from that of the graphs
       complement (see ALGORITHM).
 
-    - ``name`` - optional string for the variable name in the polynomial
+    - ``name`` -- optional string for the variable name in the polynomial
 
     .. NOTE::
 

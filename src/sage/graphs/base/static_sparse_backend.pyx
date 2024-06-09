@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-graphs
 r"""
 Static sparse graph backend
 
@@ -240,7 +241,7 @@ cdef class StaticSparseCGraph(CGraph):
 
         INPUT:
 
-        - ``u,v`` -- integers
+        - ``u``, ``v`` -- integers
 
         TESTS::
 
@@ -652,7 +653,7 @@ cdef class StaticSparseBackend(CGraphBackend):
 
         INPUT:
 
-        - ``u,v`` -- two vertices
+        - ``u``, ``v`` -- two vertices
 
         TESTS::
 
@@ -727,7 +728,7 @@ cdef class StaticSparseBackend(CGraphBackend):
 
         INPUT:
 
-        - ``u,v`` -- two vertices
+        - ``u``, ``v`` -- two vertices
 
         - ``l`` -- a label
 

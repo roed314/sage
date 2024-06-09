@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Hyperbolic Geodesics
 
@@ -68,7 +69,6 @@ the same::
 
     Implement a parent for all geodesics of the hyperbolic plane?
     Or implement geodesics as a parent in the subobjects category?
-
 """
 
 

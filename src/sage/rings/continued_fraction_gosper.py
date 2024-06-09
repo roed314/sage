@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# sage_setup: distribution = sagemath-categories
 """
 Gosper iterator for homographic transformations
 
@@ -47,7 +47,7 @@ class gosper_iterator():
 
         INPUT:
 
-        - ``a, b, c, d`` -- integer coefficients of the transformation
+        - ``a``, ``b``, ``c``, ``d`` -- integer coefficients of the transformation
 
         - ``x`` -- a continued fraction
 

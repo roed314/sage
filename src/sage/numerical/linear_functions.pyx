@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-polyhedra
 """
 Linear Functions and Constraints
 
@@ -164,11 +165,12 @@ def is_LinearConstraint(x):
     """
     return isinstance(x, LinearConstraint)
 
-#*****************************************************************************
+
+# ****************************************************************************
 #
 # Factory functions for the parents to ensure uniqueness
 #
-#*****************************************************************************
+# ****************************************************************************
 
 @cached_function
 def LinearFunctionsParent(base_ring):

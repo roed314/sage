@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 r"""
 Some functions regarding geometric endomorphism rings of Jacobians of
 hyperelliptic curves.
@@ -76,7 +77,6 @@ the LMFDB label of the curve is 169.a.169.1::
 AUTHORS:
 
 - Barinder S. Banwait and Davide Lombardo (2021-06-09): initial version
-
 """
 
 # ****************************************************************************

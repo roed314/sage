@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 """
 Abstract SAT Solver
 
@@ -33,7 +34,7 @@ cdef class SatSolver:
 
         INPUT:
 
-        - ``decision`` - is this variable a decision variable?
+        - ``decision`` -- is this variable a decision variable?
 
         EXAMPLES::
 
@@ -67,7 +68,7 @@ cdef class SatSolver:
 
         INPUT:
 
-        - ``lits`` - a tuple of integers != 0
+        - ``lits`` -- a tuple of integers != 0
 
         .. NOTE::
 
@@ -111,7 +112,7 @@ cdef class SatSolver:
 
         INPUT:
 
-        - ``filename`` - The name of a file as a string or a file object
+        - ``filename`` -- The name of a file as a string or a file object
 
         EXAMPLES::
 
@@ -176,7 +177,7 @@ cdef class SatSolver:
 
         INPUT:
 
-        - ``assumptions`` - assumed variable assignments (default: ``None``)
+        - ``assumptions`` -- assumed variable assignments (default: ``None``)
 
         OUTPUT:
 
@@ -222,7 +223,7 @@ cdef class SatSolver:
 
         INPUT:
 
-        - ``unitary_only`` - return only unitary learnt clauses (default: ``False``)
+        - ``unitary_only`` -- return only unitary learnt clauses (default: ``False``)
 
         EXAMPLES::
 
@@ -257,7 +258,7 @@ cdef class SatSolver:
 
         INPUT:
 
-        - ``filename'' - if not ``None`` clauses are written to ``filename`` in
+        - ``filename'' -- if not ``None`` clauses are written to ``filename`` in
           DIMACS format (default: ``None``)
 
         OUTPUT:
@@ -322,7 +323,7 @@ def SAT(solver=None, *args, **kwds):
 
     - ``solver`` (string) -- select a solver. Admissible values are:
 
-        - ``"cryptominisat"`` -- note that the cryptominisat package must be
+        - ``"cryptominisat"`` -- note that the pycryptosat package must be
           installed.
 
         - ``"picosat"`` -- note that the pycosat package must be installed.

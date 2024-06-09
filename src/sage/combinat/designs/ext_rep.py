@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-graphs
 r"""
 External Representations of Block Designs
 
@@ -18,7 +19,6 @@ written by Peter Dobcsanyi [Do2009]_ peter@designtheory.org.
 
 Functions
 ---------
-
 """
 
 ###########################################################################
@@ -922,7 +922,7 @@ class XTreeProcessor:
                     self.block_design_proc(self.current_node[2][0])
                 if self.save_designs:
                     init_bd = XTree(self.current_node[2][0])
-                    self.list_of_designs.append((init_bd.v, [b for b in init_bd.blocks]))
+                    self.list_of_designs.append((init_bd.v, list(init_bd.blocks)))
                 #print_subxt(self.current_node[2][0], level=2, outf=self.outf)
                 self._init()
             elif name == 'info':

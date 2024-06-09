@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-modules
 r"""
 Morphisms between extension of rings
 
@@ -36,10 +37,10 @@ cdef are_equal_morphisms(f, g):
 
     INPUT:
 
-    - ``f`` - a ring homomorphism or ``None``; if ``None``,
+    - ``f`` -- a ring homomorphism or ``None``; if ``None``,
       we consider that ``f`` is a coercion map
 
-    - ``g`` - a ring homomorphism or ``None``
+    - ``g`` -- a ring homomorphism or ``None``
 
     TESTS::
 

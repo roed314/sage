@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-modules
 r"""
 Fraction fields of Ore polynomial rings
 
@@ -375,7 +376,7 @@ class OreFunctionField(Parent, UniqueRepresentation):
 
         INPUT:
 
-        -  ``n`` - an integer (default: 1)
+        -  ``n`` -- an integer (default: 1)
 
         EXAMPLES::
 
@@ -582,8 +583,8 @@ class OreFunctionField(Parent, UniqueRepresentation):
         - ``monic`` -- (default: ``False``) if ``True``, return a monic
           Ore function with monic numerator and denominator
 
-        - ``*args, **kwds`` -- passed in to the ``random_element`` method
-          for the base ring
+        - ``*args``, ``**kwds`` -- passed in to the :meth:`random_element`
+          method for the base ring
 
         EXAMPLES::
 

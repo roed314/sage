@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.modules
 r"""
 Quantum Clifford Algebras
@@ -29,6 +30,7 @@ from sage.rings.fraction_field import FractionField
 from sage.sets.finite_enumerated_set import FiniteEnumeratedSet
 from itertools import product
 from sage.combinat.subset import powerset
+
 
 class QuantumCliffordAlgebra(CombinatorialFreeModule):
     r"""
@@ -325,6 +327,7 @@ class QuantumCliffordAlgebra(CombinatorialFreeModule):
         """
         return (self._psi([0]*self._n), (0,)*self._n)
 
+
 class QuantumCliffordAlgebraGeneric(QuantumCliffordAlgebra):
     r"""
     The quantum Clifford algebra when `q^{2k} \neq 1`.
@@ -614,6 +617,7 @@ class QuantumCliffordAlgebraGeneric(QuantumCliffordAlgebra):
             return Cl.element_class(Cl, ret)
 
         __invert__ = inverse
+
 
 class QuantumCliffordAlgebraRootUnity(QuantumCliffordAlgebra):
     r"""

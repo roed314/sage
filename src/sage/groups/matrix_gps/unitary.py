@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-modules
 r"""
 Unitary Groups `GU(n,q)` and `SU(n,q)`
 
@@ -68,11 +69,7 @@ def finite_field_sqrt(ring):
     """
     Helper function.
 
-    INPUT: A ring.
-
-    OUTPUT:
-
-    Integer `q` such that ``ring`` is the finite field with `q^2` elements.
+    OUTPUT: integer `q` such that ``ring`` is the finite field with `q^2` elements
 
     EXAMPLES::
 
@@ -180,7 +177,7 @@ def GU(n, R, var='a', invariant_form=None):
     - ``R`` -- ring or an integer; if an integer is specified, the
       corresponding finite field is used
 
-    - ``var`` -- (optional, default: ``'a'``) variable used to
+    - ``var`` -- (default: ``'a'``) variable used to
       represent generator of the finite field, if needed
 
     - ``invariant_form`` -- (optional) instances being accepted by
@@ -189,7 +186,7 @@ def GU(n, R, var='a', invariant_form=None):
       by the unitary group; the form is checked to be
       non-degenerate and hermitian but not to be positive definite
 
-    OUTPUT: The general unitary group.
+    OUTPUT: the general unitary group
 
     EXAMPLES::
 
@@ -292,7 +289,7 @@ def SU(n, R, var='a', invariant_form=None):
     - ``R`` -- ring or an integer; if an integer is specified, the
       corresponding finite field is used
 
-    - ``var`` -- (optional, default: ``'a'``) variable used to
+    - ``var`` -- (default: ``'a'``) variable used to
       represent generator of the finite field, if needed
 
     - ``invariant_form`` -- (optional) instances being accepted by
@@ -301,9 +298,7 @@ def SU(n, R, var='a', invariant_form=None):
       by the unitary group; the form is checked to be
       non-degenerate and hermitian but not to be positive definite
 
-    OUTPUT:
-
-    Return the special unitary group.
+    OUTPUT: the special unitary group
 
     EXAMPLES::
 
@@ -396,7 +391,7 @@ class UnitaryMatrixGroup_generic(NamedMatrixGroup_generic):
         Return the hermitian form preserved by the unitary
         group.
 
-        OUTPUT: A square matrix describing the bilinear form
+        OUTPUT: a square matrix describing the bilinear form
 
         EXAMPLES::
 

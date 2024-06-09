@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-groups
 # sage.doctest: needs sage.rings.finite_rings
 r"""
 Elements of a semimonomial transformation group
@@ -29,8 +30,6 @@ with
 `\psi^{\pi, \alpha} = (\alpha(\psi_{\pi(1)-1}), \ldots, \alpha(\psi_{\pi(n)-1}))`
 and an elementwisely defined multiplication of vectors. (The indexing
 of vectors is `0`-based here, so `\psi = (\psi_0, \psi_1, \ldots, \psi_{n-1})`.)
-
-
 
 The parent is
 :class:`~sage.groups.semimonomial_transformations.semimonomial_transformation_group.SemimonomialTransformationGroup`.
@@ -77,7 +76,7 @@ def _is_id(f, R):
 
 def _inverse(f, R):
     """
-    Returns the inverse to the automorphism `f` of a ring `R`.
+    Return the inverse to the automorphism `f` of a ring `R`.
 
     EXAMPLES::
 
@@ -91,6 +90,7 @@ def _inverse(f, R):
     while not _is_id(g*f, R):
         g *= f
     return g
+
 
 cdef class SemimonomialTransformation(MultiplicativeGroupElement):
     r"""
@@ -267,8 +267,8 @@ cdef class SemimonomialTransformation(MultiplicativeGroupElement):
 
     def __reduce__(self):
         """
-        Returns a function and its arguments needed to create this
-        semimonomial group element.  This is used in pickling.
+        Return a function and its arguments needed to create this
+        semimonomial group element. This is used in pickling.
 
         EXAMPLES::
 
@@ -281,7 +281,7 @@ cdef class SemimonomialTransformation(MultiplicativeGroupElement):
 
     def get_v(self):
         """
-        Returns the component corresponding to `{R^{\times}}^n` of ``self``.
+        Return the component corresponding to `{R^{\times}}^n` of ``self``.
 
         EXAMPLES::
 
@@ -293,7 +293,7 @@ cdef class SemimonomialTransformation(MultiplicativeGroupElement):
 
     def get_v_inverse(self):
         """
-        Returns the (elementwise) inverse of the component corresponding to
+        Return the (elementwise) inverse of the component corresponding to
         `{R^{\times}}^n` of ``self``.
 
         EXAMPLES::
@@ -306,7 +306,7 @@ cdef class SemimonomialTransformation(MultiplicativeGroupElement):
 
     def get_perm(self):
         """
-        Returns the component corresponding to `S_n` of ``self``.
+        Return the component corresponding to `S_n` of ``self``.
 
         EXAMPLES::
 
@@ -318,7 +318,7 @@ cdef class SemimonomialTransformation(MultiplicativeGroupElement):
 
     def get_autom(self):
         """
-        Returns the component corresponding to `Aut(R)` of ``self``.
+        Return the component corresponding to `Aut(R)` of ``self``.
 
         EXAMPLES::
 

@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 # sage.doctest: needs sage.graphs
 r"""
 Analytic types of modular forms
@@ -9,7 +10,6 @@ list of handled properties.
 AUTHORS:
 
 - Jonas Jermann (2013): initial version
-
 """
 
 # ****************************************************************************
@@ -294,15 +294,15 @@ class AnalyticType(FiniteLatticePoset):
 
     The basic ``analytic properties`` are:
 
-    - ``quasi``  - Whether the element is quasi modular (and not modular)
+    - ``quasi`` -- Whether the element is quasi modular (and not modular)
                    or modular.
-    - ``mero``   - ``meromorphic``: If the element is meromorphic
+    - ``mero``  -- ``meromorphic``: If the element is meromorphic
                    and meromorphic at infinity.
-    - ``weak``   - ``weakly holomorphic``: If the element is holomorphic
+    - ``weak``  -- ``weakly holomorphic``: If the element is holomorphic
                    and meromorphic at infinity.
-    - ``holo``   - ``holomorphic``: If the element is holomorphic and
+    - ``holo``  -- ``holomorphic``: If the element is holomorphic and
                    holomorphic at infinity.
-    - ``cusp``   - ``cuspidal``: If the element additionally has a positive
+    - ``cusp``  -- ``cuspidal``: If the element additionally has a positive
                    order at infinity.
 
     The ``zero`` elements/property have no analytic properties (or only ``quasi``).

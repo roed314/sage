@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-ntl
 # distutils: libraries = NTL_LIBRARIES gmp m
 # distutils: extra_compile_args = NTL_CFLAGS
 # distutils: include_dirs = NTL_INCDIR
@@ -90,7 +91,6 @@ cdef class ntl_GF2EContext_class():
             [1 1 0 0 0 0 0 1]
         """
         return self.m
-
 
     def restore(self):
         """

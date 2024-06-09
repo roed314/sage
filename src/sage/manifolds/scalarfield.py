@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Scalar Fields
 
@@ -25,7 +26,6 @@ REFERENCES:
 
 - [Lee2011]_
 - [KN1963]_
-
 """
 
 # *****************************************************************************

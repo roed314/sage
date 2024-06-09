@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Manifold Structures
 
@@ -10,7 +11,6 @@ AUTHORS:
   :class:`RealDifferentialStructure`
 - Eric Gourgoulhon (2018): add :class:`PseudoRiemannianStructure`,
   :class:`RiemannianStructure` and :class:`LorentzianStructure`
-
 """
 
 #*****************************************************************************

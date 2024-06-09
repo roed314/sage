@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-groups
 r"""
 Groups of imaginary elements
 
@@ -284,9 +285,7 @@ class ImaginaryGroup(UniqueRepresentation, Parent):
         - ``category`` -- a category or ``None`` (in which case the output
           equals ``category``)
 
-        OUTPUT:
-
-        A category.
+        OUTPUT: a category
 
         EXAMPLES::
 
@@ -376,9 +375,7 @@ class ImaginaryGroup(UniqueRepresentation, Parent):
 
         - ``imag`` -- a number (of a subset of the reals) or ``None``
 
-        OUTPUT:
-
-        A :class:`ImaginaryElement`.
+        OUTPUT: a :class:`ImaginaryElement`
 
         TESTS::
 

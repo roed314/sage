@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 # sage.doctest: needs sage.rings.number_field
 """
 Torsion points on modular abelian varieties
@@ -195,7 +196,7 @@ class TorsionPoint(ModuleElement):
 
         INPUT:
 
-        - ``self, right`` -- elements of the same finite abelian
+        - ``self``, ``right`` -- elements of the same finite abelian
           variety subgroup.
 
         - ``op`` -- comparison operator (see :mod:`sage.structure.richcmp`)

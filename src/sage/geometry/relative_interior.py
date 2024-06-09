@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-polyhedra
 r"""
 Relative Interiors of Polyhedra and Cones
 """
@@ -42,7 +43,7 @@ class RelativeInterior(ConvexSet_relatively_open):
 
         INPUT:
 
-        - ``polyhedron`` - an instance of :class:`Polyhedron_base` or
+        - ``polyhedron`` -- an instance of :class:`Polyhedron_base` or
           :class:`ConvexRationalPolyhedralCone`.
 
         TESTS::

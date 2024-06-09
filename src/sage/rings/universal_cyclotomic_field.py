@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-gap
 # sage.doctest: needs sage.libs.gap
 r"""
 Universal cyclotomic field
@@ -160,7 +161,6 @@ AUTHORS:
 - Vincent Delecroix (2015): completed rewriting using libgap (see :issue:`18152`)
 - Sebastian Oehms (2018): deleted the method is_finite since it returned the wrong result (see :issue:`25686`)
 - Sebastian Oehms (2019): added :meth:`_factor_univariate_polynomial` (see :issue:`28631`)
-
 """
 
 import sage.rings.abc
@@ -1250,7 +1250,7 @@ class UniversalCyclotomicFieldElement(FieldElement):
 
         INPUT:
 
-        - ``var`` -- (optional, default 'x') the name of the variable to use.
+        - ``var`` -- (default: 'x') the name of the variable to use.
 
         EXAMPLES::
 

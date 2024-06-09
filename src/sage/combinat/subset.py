@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 r"""
 Subsets
 
@@ -1479,7 +1480,7 @@ def powerset(X):
 
     INPUT:
 
-    -  ``X`` - an iterable
+    -  ``X`` -- an iterable
 
     OUTPUT: iterator of lists
 

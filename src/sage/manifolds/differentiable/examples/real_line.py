@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 The Real Line and Open Intervals
 
@@ -13,7 +14,6 @@ AUTHORS:
 REFERENCES:
 
 - [Lee2013]_
-
 """
 #*****************************************************************************
 #       Copyright (C) 2015 Eric Gourgoulhon <eric.gourgoulhon@obspm.fr>

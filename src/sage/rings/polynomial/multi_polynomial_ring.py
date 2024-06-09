@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 r"""
 Multivariate Polynomial Rings over Generic Rings
 
@@ -554,11 +555,11 @@ class MPolynomialRing_polydict(MPolynomialRing_macaulay2_repr, PolynomialRing_si
 
         INPUT:
 
-        -  ``f`` - monomial.
+        -  ``f`` -- monomial.
 
-        -  ``g`` - monomial.
+        -  ``g`` -- monomial.
 
-        -  ``coeff`` - divide coefficients as well (default:
+        -  ``coeff`` -- divide coefficients as well (default:
            False).
 
         OUTPUT: monomial.
@@ -650,9 +651,9 @@ class MPolynomialRing_polydict(MPolynomialRing_macaulay2_repr, PolynomialRing_si
 
         INPUT:
 
-        -  ``f`` - monomial.
+        -  ``f`` -- monomial.
 
-        -  ``g`` - monomial.
+        -  ``g`` -- monomial.
 
         OUTPUT: monomial.
 
@@ -704,9 +705,9 @@ class MPolynomialRing_polydict(MPolynomialRing_macaulay2_repr, PolynomialRing_si
         INPUT:
 
 
-        -  ``f`` - monomial
+        -  ``f`` -- monomial
 
-        -  ``G`` - list/set of mpolynomials
+        -  ``G`` -- list/set of mpolynomials
 
 
         EXAMPLES::
@@ -802,9 +803,9 @@ class MPolynomialRing_polydict(MPolynomialRing_macaulay2_repr, PolynomialRing_si
 
         INPUT:
 
-        -  ``h`` - monomial.
+        -  ``h`` -- monomial.
 
-        -  ``g`` - monomial.
+        -  ``g`` -- monomial.
 
         OUTPUT: Boolean.
 
@@ -853,7 +854,7 @@ class MPolynomialRing_polydict(MPolynomialRing_macaulay2_repr, PolynomialRing_si
 
         INPUT:
 
-        -  ``t`` - a monomial.
+        -  ``t`` -- a monomial.
 
         OUTPUT: a list of monomials.
 

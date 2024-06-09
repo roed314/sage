@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-graphs
 r"""
 Covering Arrays (CA)
 
@@ -34,7 +35,6 @@ REFERENCES:
 AUTHORS:
 
 - Aaron Dwyer and brett stevens (2022): initial version
-
 """
 
 # **********************************************************************

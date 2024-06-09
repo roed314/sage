@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-modules
 # sage.doctest: needs sage.modules
 r"""
 Clifford Algebras
@@ -514,6 +515,7 @@ class CliffordAlgebra(CombinatorialFreeModule):
             sage: Cl.category()
             Category of finite dimensional super algebras with basis over
              (Dedekind domains and euclidean domains
+              and noetherian rings
               and infinite enumerated sets and metric spaces)
             sage: TestSuite(Cl).run()
 
@@ -1093,6 +1095,7 @@ class CliffordAlgebra(CombinatorialFreeModule):
             sage: phi.category_for()
             Category of finite dimensional super algebras with basis over
              (Dedekind domains and euclidean domains
+              and noetherian rings
               and infinite enumerated sets and metric spaces)
             sage: phi.matrix()
             [  1   0   0   0   7  -3  -7   0]
@@ -1177,6 +1180,7 @@ class CliffordAlgebra(CombinatorialFreeModule):
             sage: phi.category_for()
             Category of finite dimensional super algebras with basis over
              (Dedekind domains and euclidean domains
+              and noetherian rings
               and infinite enumerated sets and metric spaces)
             sage: phi.matrix()
             [ 1  0  0  0  1  2  5  0]
@@ -2711,6 +2715,7 @@ class ExteriorAlgebraCoboundary(ExteriorAlgebraDifferential):
             basis = next_basis
 
         return ChainComplex(data, degree=1)
+
 
 @richcmp_method
 class ExteriorAlgebraIdeal(Ideal_nc):

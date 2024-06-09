@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-modules
 
 import copyreg
 
@@ -29,9 +30,10 @@ def metaclass(name, bases):
 
     """
     print("constructing class")
-    result = Metaclass(name, bases, dict())
+    result = Metaclass(name, bases, {})
     result.reduce_args = (name, bases)
     return result
+
 
 class Metaclass(type):
     """

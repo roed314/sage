@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-gap
 r"""
 Automorphisms of abelian groups
 
@@ -94,7 +95,7 @@ class AbelianGroupAutomorphism(ElementLibGAP):
 
     - ``x`` -- a libgap element
     - ``parent`` -- the parent :class:`~AbelianGroupAutomorphismGroup_gap`
-    - ``check`` -- bool (default:True) checks if ``x`` is an element
+    - ``check`` -- bool (default: ``True``) checks if ``x`` is an element
       of the group
 
     EXAMPLES::
@@ -176,9 +177,7 @@ class AbelianGroupAutomorphism(ElementLibGAP):
         The `i`-th row is the exponent vector of
         the image of the `i`-th generator.
 
-        OUTPUT:
-
-        - a square matrix over the integers
+        OUTPUT: a square matrix over the integers
 
         EXAMPLES::
 
@@ -315,9 +314,7 @@ class AbelianGroupAutomorphismGroup_gap(CachedRepresentation,
 
         - ``S`` -- anything
 
-        OUTPUT:
-
-        Boolean or nothing
+        OUTPUT: boolean or nothing
 
         EXAMPLES::
 

@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-modules
 # sage.doctest: optional - sage.rings.finite_rings               (because all doctests use finite fields)
 # sage.doctest: optional - sage.rings.function_field    (because almost all doctests use function field extensions)
 """
@@ -37,7 +38,6 @@ We verify the Riemann-Roch theorem::
 AUTHORS:
 
 - Kwankyu Lee (2017-04-30): initial version
-
 """
 
 # ****************************************************************************

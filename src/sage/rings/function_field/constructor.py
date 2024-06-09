@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 r"""
 Factories to construct function fields
 
@@ -22,7 +23,6 @@ AUTHORS:
 
 - Julian Rueth (2011-09-14): replaced ``@cached_function`` with
   ``UniqueFactory``
-
 """
 
 # ****************************************************************************

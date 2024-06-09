@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-pari
 r"""
 Augmented valuations on polynomial rings
 
@@ -141,7 +142,6 @@ REFERENCES:
 
 Augmentations are described originally in [Mac1936I]_ and [Mac1936II]_. An
 overview can also be found in Chapter 4 of [Rüt2014]_.
-
 """
 # ****************************************************************************
 #       Copyright (C) 2013-2017 Julian Rüth <julian.rueth@fsfe.org>

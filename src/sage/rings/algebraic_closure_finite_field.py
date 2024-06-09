@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 # sage.doctest: needs sage.rings.finite_rings
 r"""
 Algebraic closures of finite fields
@@ -52,7 +53,6 @@ AUTHORS:
 - Peter Bruin (August 2013): initial version
 
 - Vincent Delecroix (November 2013): additional methods
-
 """
 
 from sage.misc.abstract_method import abstract_method

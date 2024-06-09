@@ -1,10 +1,10 @@
+# sage_setup: distribution = sagemath-categories
 """
 Partition backtrack functions for lists -- a simple example of using partn_ref
 
 EXAMPLES::
 
     sage: import sage.groups.perm_gps.partn_ref.refinement_lists
-
 """
 
 #*****************************************************************************
@@ -61,6 +61,7 @@ def is_isomorphic(self, other):
         output_py = False
     sig_free(output)
     return output_py
+
 
 cdef bint all_list_children_are_equivalent(PartitionStack *PS, void *S) noexcept:
     return 0

@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-modules
 # sage.doctest: needs sage.rings.number_field
 """
 Elements (characters) of the dual group of a finite Abelian group
@@ -64,9 +65,7 @@ def is_DualAbelianGroupElement(x) -> bool:
 
     - ``x`` -- anything
 
-    OUTPUT:
-
-    Boolean
+    OUTPUT: boolean
 
     EXAMPLES::
 
@@ -89,10 +88,8 @@ class DualAbelianGroupElement(AbelianGroupElementBase):
         """
         Evaluate ``self`` on a group element ``g``.
 
-        OUTPUT:
-
-        An element in
-        :meth:`~sage.groups.abelian_gps.dual_abelian_group.DualAbelianGroup_class.base_ring`.
+        OUTPUT: an element in
+        :meth:`~sage.groups.abelian_gps.dual_abelian_group.DualAbelianGroup_class.base_ring`
 
         EXAMPLES::
 

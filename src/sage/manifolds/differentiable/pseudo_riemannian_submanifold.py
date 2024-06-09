@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Pseudo-Riemannian submanifolds
 
@@ -176,7 +177,6 @@ REFERENCES:
 
 - \B. O'Neill : *Semi-Riemannian Geometry* [ONe1983]_
 - \J. M. Lee : *Riemannian Manifolds* [Lee1997]_
-
 """
 
 # *****************************************************************************

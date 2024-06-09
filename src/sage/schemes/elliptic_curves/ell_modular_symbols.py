@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 r"""
 Modular symbols attached to elliptic curves over `\QQ`
 
@@ -70,7 +71,6 @@ AUTHORS:
 - Chris Wuthrich (2008): add scaling and reference to eclib
 
 - John Cremona (2016): reworked eclib interface
-
 """
 
 #*****************************************************************************

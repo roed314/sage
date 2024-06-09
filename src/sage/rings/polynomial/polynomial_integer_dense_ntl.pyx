@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-ntl
 # distutils: libraries = NTL_LIBRARIES gmp
 # distutils: extra_compile_args = NTL_CFLAGS
 # distutils: include_dirs = NTL_INCDIR
@@ -565,7 +566,6 @@ cdef class Polynomial_integer_dense_ntl(Polynomial):
                 raise ArithmeticError("division not exact in Z[x] (consider coercing to Q[x] first)")
 
         return qq, rr
-
 
 
     @coerce_binop

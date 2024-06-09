@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 # sage.doctest: needs sage.rings.finite_rings
 """
 Base class for finite field elements
@@ -208,9 +209,9 @@ cdef class FinitePolyExtElement(FiniteRingElement):
 
         INPUT:
 
-        - ``var`` - string (default: 'x')
+        - ``var`` -- string (default: 'x')
 
-        - ``algorithm`` - string (default: 'pari')
+        - ``algorithm`` -- string (default: 'pari')
 
           - 'pari' -- use pari's minpoly
 
@@ -545,7 +546,7 @@ cdef class FinitePolyExtElement(FiniteRingElement):
 
         INPUT:
 
-        - ``var`` -- default: ``None`` - a string for a new variable name to use.
+        - ``var`` -- (default: ``None``); a string for a new variable name to use.
 
         EXAMPLES::
 

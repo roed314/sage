@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 Tangent-Space Automorphism Fields
 
@@ -12,7 +13,6 @@ AUTHORS:
 
 - Eric Gourgoulhon (2015): initial version
 - Travis Scrimshaw (2016): review tweaks
-
 """
 
 # *****************************************************************************

@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 # sage.doctest: needs sage.modules
 r"""
 Ring of Laurent Polynomials (base class)
@@ -504,7 +505,7 @@ class LaurentPolynomialRing_generic(CommutativeRing, Parent):
         - ``max_degree`` -- integer (default: ``2``); the
           maximal allowed degree of the polynomial
 
-        - ``*args, **kwds`` -- passed to the random element generator of the
+        - ``*args``, ``**kwds`` -- passed to the random element generator of the
           base polynomial ring and base ring itself
 
         EXAMPLES::

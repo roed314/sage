@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 r"""
 Fermionic Ghosts Super Lie Conformal Algebra
@@ -29,6 +30,7 @@ AUTHORS:
 #*****************************************************************************
 
 from .graded_lie_conformal_algebra import GradedLieConformalAlgebra
+
 
 class FermionicGhostsLieConformalAlgebra(GradedLieConformalAlgebra):
     r"""

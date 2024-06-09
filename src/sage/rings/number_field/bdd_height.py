@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-flint
 # sage.doctest: needs sage.geometry.polyhedron
 r"""
 Elements of bounded height in number fields
@@ -13,7 +14,6 @@ AUTHORS:
 
 - John Doyle, David Krumm (2013): initial version
 - TJ Combs, Raghukul Raman (2018): added Doyle-Krumm algorithm-4
-
 """
 # ****************************************************************************
 #       Copyright (C) 2013 John Doyle and David Krumm

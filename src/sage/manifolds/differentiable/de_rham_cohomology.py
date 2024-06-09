@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-symbolics
 r"""
 De Rham Cohomology
 
@@ -34,7 +35,6 @@ Its elements, the cohomology classes, are represented by
 AUTHORS:
 
 - Michael Jung (2021) : initial version
-
 """
 
 #******************************************************************************
@@ -209,7 +209,7 @@ class DeRhamCohomologyClass(AlgebraElement):
 
         INPUT:
 
-        - ``other``-- another cohomology class in the de Rham cohomology
+        - ``other`` -- another cohomology class in the de Rham cohomology
 
         EXAMPLES::
 

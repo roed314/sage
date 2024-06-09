@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 r"""
 Compute Bell and Uppuluri-Carpenter numbers
 
@@ -21,9 +22,9 @@ def expnums(int n, int aa):
     INPUT:
 
 
-    -  ``n`` - C machine int
+    -  ``n`` -- C machine int
 
-    -  ``aa`` - C machine int
+    -  ``aa`` -- C machine int
 
 
     OUTPUT: A list of length `n`.

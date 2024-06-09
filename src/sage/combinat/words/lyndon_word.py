@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 """
 Lyndon words
 """
@@ -100,7 +101,7 @@ def LyndonWord(data, check=True):
     INPUT:
 
     - ``data`` -- list
-    - ``check`` -- bool (optional, default: ``True``) if ``True``,
+    - ``check`` -- bool (default: ``True``) if ``True``,
       check that the input data represents a Lyndon word.
 
     OUTPUT:

@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 """
 Sets
 
@@ -17,7 +18,6 @@ AUTHORS:
 
 - Julian Rueth (2013-04-09) - Collected common code in
   :class:`Set_object_binary`, fixed ``__hash__``.
-
 """
 
 # ****************************************************************************
@@ -1720,7 +1720,9 @@ class Set_object_difference(Set_object_binary):
             sage: S = Set(QQ)
             sage: T = Set(ZZ)
             sage: X = S.difference(T); X
-            Set-theoretic difference of Set of elements of Rational Field and Set of elements of Integer Ring
+            Set-theoretic difference of
+             Set of elements of Rational Field and
+             Set of elements of Integer Ring
             sage: X.category()
             Category of sets
             sage: latex(X)

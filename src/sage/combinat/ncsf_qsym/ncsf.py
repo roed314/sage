@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-combinat
 # sage.doctest: needs sage.combinat sage.modules
 """
 Non-Commutative Symmetric Functions
@@ -4574,8 +4575,8 @@ class NonCommutativeSymmetricFunctions(UniqueRepresentation, Parent):
 
             INPUT:
 
-            - ``self`` - the Monomial basis of non-commutative symmetric functions
-            - ``I`` - a composition
+            - ``self`` -- the Monomial basis of non-commutative symmetric functions
+            - ``I`` -- a composition
 
             OUTPUT:
 

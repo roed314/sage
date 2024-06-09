@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-groups
 r"""
 Kernel Subgroups
 
@@ -20,6 +21,7 @@ from sage.categories.groups import Groups
 from sage.structure.element_wrapper import ElementWrapper
 from sage.structure.parent import Parent
 from sage.structure.unique_representation import UniqueRepresentation
+
 
 class KernelSubgroup(UniqueRepresentation, Parent):
     r"""

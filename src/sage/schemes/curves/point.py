@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-schemes
 # sage.doctest: needs sage.libs.singular
 """
 Rational points of curves
@@ -23,7 +24,6 @@ or on affine curves::
 AUTHORS:
 
 - Grayson Jorgenson (2016-6): initial version
-
 """
 # ****************************************************************************
 #       Copyright (C) 2005 William Stein <wstein@gmail.com>

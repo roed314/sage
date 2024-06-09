@@ -1,3 +1,4 @@
+# sage_setup: distribution = sagemath-categories
 r"""
 Subschemes of affine space
 
@@ -6,7 +7,6 @@ AUTHORS:
 - David Kohel, William Stein (2005): initial version
 
 - Ben Hutz (2013): affine subschemes
-
 """
 
 # ****************************************************************************
